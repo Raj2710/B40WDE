@@ -4,13 +4,16 @@ import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
 import {useNavigate} from 'react-router-dom'
 // import Progresscard from './Progresscard'
+import { ToastContainer, toast } from 'react-toastify';
 
 function Dashboard({data,students,setStudents}) {
     let navigate = useNavigate()
    let  handleDelete = (i)=>{
+    toast.error(`${students[i].name} Deleted Successfully`)
     let newArray = [...students]//deep copy or clone the state
     newArray.splice(i,1)//delete the element in the new array
     setStudents(newArray)//update the state with the new Array
+
    }
   return <div id="content-wrapper" className="d-flex flex-column">
   <div id="content">
@@ -80,7 +83,9 @@ function Dashboard({data,students,setStudents}) {
       </div>
   </footer>
   {/* <!-- End of Footer --> */}
-
+<ToastContainer
+autoClose={3000}
+/>
 </div>
 }
 

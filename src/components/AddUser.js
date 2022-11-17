@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import {useNavigate} from 'react-router-dom'
+import { toast } from 'react-toastify';
 
 
 function AddUser({students,setStudents}) {
@@ -13,6 +14,7 @@ function AddUser({students,setStudents}) {
   let [sessionTime,setSessionTime] = useState("10am to 12pm")
 
   let handleSubmit = ()=>{
+
     let newArray = [...students]
     newArray.push({
       name,
@@ -23,6 +25,7 @@ function AddUser({students,setStudents}) {
     })
     setStudents(newArray)
     navigate('/dashboard')
+    toast.success(`${name} addedd Successfully`)
   }
 
   return <div className='container-fluid'>

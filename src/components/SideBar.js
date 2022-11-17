@@ -39,16 +39,6 @@ function SideBar() {
 </li>
 
 <li className="nav-item">
-    <Link to='/edit-user/1'>
-    <div className="nav-link collapsed" data-toggle="collapse" data-target="#collapseUtilities"
-        aria-expanded="true" aria-controls="collapseUtilities">
-        <i className="fas fa-fw fa-wrench"></i>
-        <span>Edit User</span>
-    </div>
-    </Link>
-</li>
-
-<li className="nav-item">
     <Link to='/nested-route-example'>
     <div className="nav-link collapsed" data-toggle="collapse" data-target="#collapseUtilities"
         aria-expanded="true" aria-controls="collapseUtilities">

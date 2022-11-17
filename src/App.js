@@ -53,7 +53,7 @@ let [students,setStudents] = useState([
     <Routes>
       <Route path='/dashboard' element={<Dashboard data={data} students={students} setStudents={setStudents}/>}/>
       <Route path='/add-user' element={<AddUser students={students} setStudents={setStudents}/>}/>
-      <Route path='/edit-user/:id' element={<EditUser/>}/>
+      <Route path='/edit-user/:id' element={<EditUser students={students} setStudents={setStudents}/>}/>
       <Route path='/nested-route-example' element={<NestedRoute/>}>
           <Route path='profile' element={<Profile/>}/>
           <Route path='account' element={<Account/>}/>
