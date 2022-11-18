@@ -1,18 +1,21 @@
-import React from 'react'
+import React,{useContext} from 'react'
 import BasicCard,{ProgressCard} from './Card'
 import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
 import {useNavigate} from 'react-router-dom'
 // import Progresscard from './Progresscard'
 import { ToastContainer, toast } from 'react-toastify';
+import { StudentContext } from '../App';
 
-function Dashboard({data,students,setStudents}) {
+function Dashboard({data}) {
     let navigate = useNavigate()
+    let context = useContext(StudentContext)
+
    let  handleDelete = (i)=>{
-    toast.error(`${students[i].name} Deleted Successfully`)
-    let newArray = [...students]//deep copy or clone the state
+    toast.error(`${context.students[i].name} Deleted Successfully`)
+    let newArray = [...context.students]//deep copy or clone the state
     newArray.splice(i,1)//delete the element in the new array
-    setStudents(newArray)//update the state with the new Array
+    context.setStudents(newArray)//update the state with the new Array
 
    }
   return <div id="content-wrapper" className="d-flex flex-column">
@@ -45,7 +48,7 @@ function Dashboard({data,students,setStudents}) {
       </thead>
       <tbody>
         {
-            students.map((e,i)=>{
+            context.students.map((e,i)=>{
                 return <tr key={i}>
                     <td>{i+1}</td>
                     <td>{e.name}</td>
