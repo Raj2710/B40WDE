@@ -3,7 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import {useParams,useNavigate} from 'react-router-dom'
 import { ToastContainer, toast } from 'react-toastify';
-import { StudentContext } from '../App';
+import { StudentContext } from "./ContextComponents/StudentContextComponent";
 
 function EditUser() {
   let params = useParams()

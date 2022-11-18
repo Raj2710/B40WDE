@@ -5,10 +5,12 @@ import Button from 'react-bootstrap/Button';
 import {useNavigate} from 'react-router-dom'
 // import Progresscard from './Progresscard'
 import { ToastContainer, toast } from 'react-toastify';
-import { StudentContext } from '../App';
+import { StudentContext } from "./ContextComponents/StudentContextComponent";
+import {DashboardContext} from './ContextComponents/DashboardContextComponent'
 
-function Dashboard({data}) {
+function Dashboard() {
     let navigate = useNavigate()
+    let dashContext = useContext(DashboardContext)
     let context = useContext(StudentContext)
 
    let  handleDelete = (i)=>{
@@ -27,10 +29,10 @@ function Dashboard({data}) {
                       className="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
           </div>
           <div className="row">
-            <BasicCard data = {{value:data.earningsMonthly,icon:'fa-calendar',cardBorder:'primary'}}/>
-            <BasicCard data = {{value:data.earningsAnnual,icon:'fa-calendar',cardBorder:'success'}}/>
-            <ProgressCard value={data.taskCompletion} icon={'fa-clipboard-list'} cardBorder={'info'}/>
-            <BasicCard data = {{value:data.pendingRequests,icon:'fa-comments',cardBorder:'warning'}}/>
+            <BasicCard data = {{value:dashContext.earningsMonthly,icon:'fa-calendar',cardBorder:'primary'}}/>
+            <BasicCard data = {{value:dashContext.earningsAnnual,icon:'fa-calendar',cardBorder:'success'}}/>
+            <ProgressCard value={dashContext.taskCompletion} icon={'fa-clipboard-list'} cardBorder={'info'}/>
+            <BasicCard data = {{value:dashContext.pendingRequests,icon:'fa-comments',cardBorder:'warning'}}/>
           </div>
 
           <div className='row'>
