@@ -1,12 +1,12 @@
 import React,{useContext} from 'react'
-import BasicCard,{ProgressCard} from './Card'
+import BasicCard,{ProgressCard} from '../Card/Card'
 import Table from 'react-bootstrap/Table';
 import Button from 'react-bootstrap/Button';
 import {useNavigate} from 'react-router-dom'
 // import Progresscard from './Progresscard'
 import { ToastContainer, toast } from 'react-toastify';
-import { StudentContext } from "./ContextComponents/StudentContextComponent";
-import {DashboardContext} from './ContextComponents/DashboardContextComponent'
+import { StudentContext } from "../ContextComponents/StudentContextComponent";
+import {DashboardContext} from '../ContextComponents/DashboardContextComponent'
 
 function Dashboard() {
     let navigate = useNavigate()

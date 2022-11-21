@@ -1,9 +1,9 @@
-import React, { useEffect,useState,useContext } from 'react'
+import React, { useState,useContext } from 'react'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import {useParams,useNavigate} from 'react-router-dom'
 import { ToastContainer, toast } from 'react-toastify';
-import { StudentContext } from "./ContextComponents/StudentContextComponent";
+import { StudentContext } from "../ContextComponents/StudentContextComponent";
 
 function EditUser() {
   let params = useParams()
@@ -50,6 +50,7 @@ function EditUser() {
       batch,
       sessionTime
     })
+    toast.success('User Edited Succseefully')
     context.setStudents(newArray)
     navigate('/dashboard')
   }

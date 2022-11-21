@@ -1,15 +1,19 @@
 import { Routes, Route,Navigate } from 'react-router-dom';
 import React from 'react';
 import SideBar from './components/SideBar'
-import Dashboard from './components/Dashboard'
-import AddUser from './components/AddUser'
-import EditUser from './components/EditUser'
+import Dashboard from './components/CRUD/Dashboard'
+import AddUser from './components/CRUD/AddUser'
+import EditUser from './components/CRUD/EditUser'
 import './App.css';
-import NestedRoute from './components/NestedRoute';
-import Profile from './components/Profile'
-import Account from './components/Account';
+import NestedRoute from './components/NestedExample/NestedRoute';
+import Profile from './components/NestedExample/Profile'
+import Account from './components/NestedExample/Account';
 import StudentContextComponent from './components/ContextComponents/StudentContextComponent';
 import DashboardContextComponent from './components/ContextComponents/DashboardContextComponent';
+import Hooks from './components/Hooks/Hooks';
+import UseRef from './components/Hooks/UseRef';
+import UseMemo from './components/Hooks/UseMemo';
+import UseReducer from './components/Hooks/UseReducer';
 
 function App() {
 
@@ -36,6 +40,11 @@ function App() {
               <Route path='account' element={<Account/>}/>
           </Route>
         {/* <Route path='*' element={<AddUser/>}/> */}
+        <Route path='/hooks' element={<Hooks/>}>
+          <Route path='useref' element={<UseRef/>}/>
+          <Route path='usememo' element={<UseMemo/>}/>
+          <Route path='usereducer' element={<UseReducer/>}/>
+        </Route>
         <Route path='*' element={<Navigate to={'/dashboard'}/>}/>
       </Routes>
   </div>

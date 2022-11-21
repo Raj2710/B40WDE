@@ -47,6 +47,16 @@ function SideBar() {
     </div>
     </Link>
 </li>
+<li className="nav-item">
+    <Link to='/hooks'>
+    <div className="nav-link collapsed" data-toggle="collapse" data-target="#collapseUtilities"
+        aria-expanded="true" aria-controls="collapseUtilities">
+        <i className="fas fa-fw fa-wrench"></i>
+        <span>Hooks</span>
+    </div>
+    </Link>
+</li>
+
 <hr className="sidebar-divider my-0"/>
 
 </ul>
