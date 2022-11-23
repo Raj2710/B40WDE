@@ -25,7 +25,7 @@ function SideBar() {
 <hr className="sidebar-divider"/>
 
 <div className="sidebar-heading">
-    Interface
+    Local CRUD and Hooks
 </div>
 
 <li className="nav-item">
@@ -58,6 +58,29 @@ function SideBar() {
 </li>
 
 <hr className="sidebar-divider my-0"/>
+<hr className="sidebar-divider"/>
+<div className="sidebar-heading">
+    CRUD with Mock API's
+</div>
+<li className="nav-item">
+    <Link to='/all-users'>
+    <div className="nav-link collapsed" data-toggle="collapse" data-target="#collapseUtilities"
+        aria-expanded="true" aria-controls="collapseUtilities">
+        <i className="fas fa-fw fa-wrench"></i>
+        <span>All Users</span>
+    </div>
+    </Link>
+</li>
+
+<li className="nav-item">
+    <Link to='/add-users'>
+    <div className="nav-link collapsed" data-toggle="collapse" data-target="#collapseUtilities"
+        aria-expanded="true" aria-controls="collapseUtilities">
+        <i className="fas fa-fw fa-wrench"></i>
+        <span>Add Users</span>
+    </div>
+    </Link>
+</li>
 
 </ul>
   </>

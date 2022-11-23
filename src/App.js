@@ -14,6 +14,8 @@ import Hooks from './components/Hooks/Hooks';
 import UseRef from './components/Hooks/UseRef';
 import UseMemo from './components/Hooks/UseMemo';
 import UseReducer from './components/Hooks/UseReducer';
+import DashboardAPI from './components/CRUDAPI/DashboardAPI';
+import AddUserAPI from './components/CRUDAPI/AddUserAPI';
 
 function App() {
 
@@ -45,6 +47,11 @@ function App() {
           <Route path='usememo' element={<UseMemo/>}/>
           <Route path='usereducer' element={<UseReducer/>}/>
         </Route>
+
+        {/* API Related Routes */}
+        <Route path='/all-users' element={<DashboardAPI/>}/>
+        <Route path='/add-users' element={<AddUserAPI/>}/>
+        <Route path='/add-users/:id' element={<AddUserAPI/>}/>
         <Route path='*' element={<Navigate to={'/dashboard'}/>}/>
       </Routes>
   </div>

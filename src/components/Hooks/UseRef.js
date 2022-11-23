@@ -27,7 +27,7 @@ function UseRef() {
     <br></br>   
     <h1>useRef Case 2</h1>
     <div>An example where we can focus an input box on button click using useRef</div>
-    <lable>Focus Area: </lable><input type={'text'} ref={inputRef}></input> &nbsp;
+    <span>Focus Area: </span><input type={'text'} ref={inputRef}></input> &nbsp;
     <Button variant='success' onClick={()=>{
         inputRef.current.focus()
     }}>Focus</Button>
