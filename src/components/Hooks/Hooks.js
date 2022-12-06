@@ -15,6 +15,9 @@ function Hooks() {
       <Link to='usereducer'>
         <li>useReducer</li>
       </Link>
+      <Link to='todo'>
+        <li>Todo</li>
+      </Link>
       <Link to='/hooks'>
         <li>Hooks-Home</li>
       </Link>
