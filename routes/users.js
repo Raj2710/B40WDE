@@ -2,6 +2,8 @@ var express = require('express');
 var router = express.Router();
 const {mongodb,MongoClient,dbName,dbUrl} = require('./../config/dbConfig')
 
+//  Using Mongodb connections
+
 router.get('/', async(req, res)=> {
   const client = new MongoClient(dbUrl)
   await client.connect()
