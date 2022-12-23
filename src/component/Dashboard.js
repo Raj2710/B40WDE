@@ -7,7 +7,6 @@ import { url } from '../App';
 
 function Dashboard() {
     let token = sessionStorage.getItem('token')
-    console.log(token)
     let [data,setData] = useState([])
     let navigate = useNavigate()
 
